@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>games</title>
+
+    <style>
+   .btn {
+    position: absolute
+    width: 10em; /* Ширина кнопки */
+    height: 2em; /* Высота кнопки */
+    background-color: #67ada9; /* Цвет фона */
+      }
+    </style>
+</head>
+<body>
+
+{% extends "menu.html" %}
+
+{% block pagename %}
+  <h1> ИГРЫ: </h1>
+{% endblock %}
+
+
+{% block menu %}
+  {{ block.super }}
+{% endblock %}
+
+
+{% block content %}
+    <ul>
+        {% for i in games_list %}
+        <li>{{i}}  <button class="btn"> <a href="/cart">Купить</a> </button> </li>
+        {% endfor %}
+        <p>-------------------------------------------------------</p>
+        <p>
+        <button> <a href="http://127.0.0.1:8000/">Вернуться на главную </a> </button>
+        </p>
+    </ul>
+ {% endblock %}
+
+</body>
+</html>
+
+
