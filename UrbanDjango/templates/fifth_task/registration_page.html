@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <h2> HTML Registration page </h2>
+
+</head>
+<body>
+    <form method = "POST">
+        {% csrf_token %}
+        <label for="name"> * Введите  логин: </label>
+        <input type="text" id="name" name="name" maxlength="30" required>
+           <br>
+        <label for="passw"> * Введите пароль>8зн.:</pre> </label>
+        <input type="text" id="passw" name="passw" minlength="8" required>
+           <br>
+        <label for="passw1"> * Подтвердите пароль: </label>
+        <input type="text" id="passw1" name="passw1" minlength="8" required>
+           <br>
+        <label for="age"> * Введите ваш возраст: </label>
+        <input type="int" id="age" name="age" maxlength="3" required>
+            <br>
+        <button type="submit"> Отправить данные</button>
+
+    </form>
+</body>
+</html>
